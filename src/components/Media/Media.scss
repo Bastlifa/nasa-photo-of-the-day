@@ -1,11 +1,14 @@
+$card-width: 80vw;
+
 .ui.card.media-card
 {
-    width: 800px;
+
+    width: $card-width;
     background-color: black;
     color: white;
     iframe
     {
-        height: 450px;
+        height: $card-width * 9/16;
     }
     .media-title
     {
