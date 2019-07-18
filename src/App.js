@@ -2,22 +2,24 @@ import React, { useState, useEffect } from 'react'
 import "./App.scss";
 import axios from 'axios'
 
-import Header from './components/Header/Header'
+
 import Media from './components/Media/Media'
-// const dotEnv = require("dotenv");
-// dotEnv.config();
+
+import 'semantic-ui-css/semantic.min.css'
+import { Container } from 'semantic-ui-react'
+import HeaderSection from './components/HeaderSection/HeaderSection';
 
 function App() {
 
   const apiKey = process.env.REACT_APP_NASA_API_KEY;
   // const apiKey = "DEMO_KEY"
 
-  // const [copyRight, setCopyRight] = useState('')
   const [date, setDate] = useState('2019-07-15')
   const [mediaTitle, setMediaTitle] = useState('')
   const [mediaType, setMediaType] = useState('image')
   const [mediaURL, setMediaURL] = useState('')
   const [mediaP, setMediaP] = useState('')
+
   useEffect( _ => 
     {
       
@@ -35,11 +37,13 @@ function App() {
 
   return (
     <div className="App">
-      <p>
+      {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span className="App-logo" role="img" aria-label="what?">🚀</span>!
-      </p>
-      <Header date={date} setDate={setDate}/>
+      </p> */}
+      
+      <HeaderSection date={date} setDate={setDate}/>
+      <Container>
       <Media 
         key={mediaURL} 
         mediaURL={mediaURL} 
@@ -47,6 +51,7 @@ function App() {
         mediaTitle={mediaTitle} 
         mediaP={mediaP}
       />
+      </Container>
     </div>
   );
 }
