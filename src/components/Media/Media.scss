@@ -1,0 +1,19 @@
+.ui.card.media-card
+{
+    width: 800px;
+    background-color: black;
+    color: white;
+    iframe
+    {
+        height: 450px;
+    }
+    .media-title
+    {
+        margin: 10px auto;
+    }
+    p {margin: 10px 15px;}
+    .inverted.divider
+    {
+        margin: 0;
+    }
+}
