@@ -6,7 +6,7 @@ export default function MediaTitle(props)
 
     return (
         <div>
-            <h2>{mediaTitle}</h2>
+            <h2 className="media-title">{mediaTitle}</h2>
         </div>
     )
 }

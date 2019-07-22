@@ -1,0 +1,22 @@
+$card-width: 80vw;
+
+.ui.card.media-card
+{
+
+    width: $card-width;
+    background-color: black;
+    color: white;
+    iframe
+    {
+        height: $card-width * 9/16;
+    }
+    .media-title
+    {
+        margin: 10px auto;
+    }
+    p {margin: 10px 15px;}
+    .inverted.divider
+    {
+        margin: 0;
+    }
+}

@@ -1,10 +1,19 @@
 import React from 'react'
+import { Input } from 'semantic-ui-react'
 
 export default function DropDown(props)
 {
-    const {date, setDate} = props
-    const changeHandler = event => setDate(event.target.value)
+    const {date, setDate, today} = props
+    const changeHandler = event => 
+    {
+        if(event.target.value > today)
+        {
+            event.target.value = today
+        }
+        setDate(event.target.value)
+
+    }
     return (
-        <input type="date" value={date} onChange={changeHandler}></input>
+        <Input type="date" value={date} onChange={changeHandler}></Input>
     )
 }
